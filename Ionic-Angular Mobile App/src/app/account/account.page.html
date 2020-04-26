@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-toolbar class = "background">
+    
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title><h1>Account</h1></ion-title>
+    <ion-button class="profile_pic" (click) = "account()">
+      <ion-icon slot="icon-only" name="contact"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-card>
+    <img src="./assets/hugeass.jpg" style = "height: 450px;">
+  </ion-card>
+
+  <ion-card class = "card2">
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title><h1>Information</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content style = "color:white;">
+      <ion-input placeholder="FirstName" [(ngModel)]="firstname"> First Name: </ion-input>
+      <ion-input placeholder="LastName"> Last Name: </ion-input>
+      Blood Type: O<br>
+      Age: 43<br>
+      Weight: 136 Lbs<br>
+      <ion-button class="round" (click)="submit()"> Submit </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class = "card1">
+    <ion-card-header>
+      <ion-card-title><h1>
+        Phone Numbers
+      </h1>
+      </ion-card-title>
+      <ion-card-content style = "color:white;">
+        Patient's Phone Number: +1 925-791-7934 <br>
+        Doctor's Phone Number: +1 510-458-7430
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class = "card2">
+    <ion-card-header>
+      <ion-card-title><h1>
+        Schedule
+      </h1>
+      </ion-card-title>
+      <ion-card-content class = "card1" style = "color:white;">
+        <ion-list>
+          <ion-item>
+            <ion-label>Codeine 9:00 AM</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Fentanyl 11:00 AM</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Hydromorphone 1:00 PM</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Methadone 3:00 PM</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Morphine 5:00 PM</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Oxycodone 7:00 PM</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Oxymorphone 9:00 PM</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Fentanyl 11:00 PM</ion-label>
+            <ion-checkbox slot="end"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class = "card1">
+    <ion-card-header>
+      <ion-card-title><h1>
+        Patient Portal/ Website
+      </h1>
+      </ion-card-title>
+      <ion-card-content style = "color:white; text-align: center;" >
+        <a href = "https://repl.it/@iepicfellow/PANACEA" style="text-align: center;">Patient Portal</a>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

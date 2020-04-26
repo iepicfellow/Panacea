@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>upload</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="canvas">
+
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>Upload Patients Cat/MRI Scan</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button class="round">Upload Image</ion-button>
+      <ion-input placeholder="Patient's Username"> Enter Patient:</ion-input>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>BLOOD PRESSURE</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input placeholder="Blood pressure" [(ngModel)]="bp"> Enter Patient's BP:</ion-input>
+      <ion-button class="round" (click)="bloodpressure()">Submit</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>TRIGLYCERIDE</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input placeholder="Patient's triglyceride" [(ngModel)]="tri"> Enter Patient's triglyceride:</ion-input>
+      <ion-button class="round" (click)="triglyceride()">Submit</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>CHOLESTEROL</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input placeholder="Patient's cholesterol" [(ngModel)]="chol"> Enter Patient's cholesterol:</ion-input>
+      <ion-button class="round" (click)="cholesterol()">submit</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>HEMOGLOBIN</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input placeholder="Patient's hemoglobin" [(ngModel)]="hemo"> Enter Patient's hemoglobin:</ion-input>
+      <ion-button class="round" (click)="hemoglobin()">Submit</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

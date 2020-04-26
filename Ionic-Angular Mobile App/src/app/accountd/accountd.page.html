@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class = "background">   
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>Information</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input placeholder="FirstName" [(ngModel)]="firstname"> First Name: </ion-input>
+      <ion-input placeholder="LastName"> Last Name: </ion-input>
+      <ion-button class="round" (click)="submit()"> Submit </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button href = "/home">Log Out</ion-button>
+  
+</ion-content>

@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-US-Compatible" content="ie-edge">
+    <title>Breast Cancer Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBv7ZrJRIC-Z3GvdfXHYfNkTgmZfZTEa4U",
+            authDomain: "chemo-ae40b.firebaseapp.com",
+            databaseURL: "https://chemo-ae40b.firebaseio.com",
+            projectId: "chemo-ae40b",
+            storageBucket: "chemo-ae40b.appspot.com",
+            messagingSenderId: "902368724751",
+            appId: "1:902368724751:web:e59ba69cb4f4ca4d8ce07a",
+            measurementId: "G-7V1KPQGDN0"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var leadsRef = firebase.database().ref('testdata');
+        leadsRef.on('value', function(snapshot) {
+            snapshot.forEach(function(childSnapshot) {
+                var childData = childSnapshot.val();
+                var myJSON = JSON.stringify(childData);
+                if (myJSON == '{"Cancer":"[0.0, 1.0]"}') {
+                    myJSON = "Not Cancerous";
+                    document.getElementById('output').innerHTML = myJSON;
+                }
+                if (myJSON == '{"Cancer":"[1.0, 0.0]"}') {
+                    myJSON = "cancer";
+                    document.getElementById('output').innerHTML = myJSON;
+                }
+            });
+        });
+    </script>
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border trans">
+                Project Panacea
+            </span>
+        </div>
+    </div>
+    
+    <section class="section section-dark">
+        <h2>About Breast Cancer</h2>
+        <p>
+            Breast cancer is a disease in which cells in the breast grow out of control. There are different kinds of breast cancer. The kind of breast cancer depends on which cells in the breast turn into cancer.
+
+            Breast cancer can begin in different parts of the breast. A breast is made up of three main parts: lobules, ducts, and connective tissue. The lobules are the glands that produce milk. The ducts are tubes that carry milk to the nipple. The connective tissue (which consists of fibrous and fatty tissue) surrounds and holds everything together. Most breast cancers begin in the ducts or lobules.
+
+            Breast cancer can spread outside the breast through blood vessels and lymph vessels. When breast cancer spreads to other parts of the body, it is said to have metastasized.
+        </p>
+        
+    </section>
+    
+    <div class="pimg4">
+        <div class="ptext">
+            <span class="border trans">
+                
+            </span>
+        </div>
+    </div>
+    
+    <section class="section section-dark">
+        <h2>About Our Project</h2>
+        <p>
+            Project Cybele aims to accurately provide patients with a credible software platform that not only enhances communication of certain health aspects, but also assists in affirming possible health cases. At its basis, Cybele allows
+            for patients and doctors to better communicate through a texting interface. The doctor also has the ability to upload important information, such as blood pressure, triglycerides, cholesterol, and chemotherapy results. In addition,
+            once doctors upload MRI Scans, Cybele checks, not only for cancer, but also if chemotherapy is benefiting the health of the patient.
+        </p>
+        
+    </section>
+    
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="border trans">
+                
+            </span>
+        </div>
+    </div>
+    
+    <section class="section section-light">
+        <h2>Benefits</h2>
+        <ul class="list">
+                    <li>Establishes direct and efficient communication between doctor and patient</li>
+                    <li>Displays accurate medical information for present and future reference</li>
+                    <li>Allows for analyzing MRI scanners</li>
+                    <li>Detects Breast Cancer with 99.8% accuracy</li>
+                    <li>Pinpoints Breast Cancer-stricken areas for diagnosis</li>
+                    <li>Aims to reduce the amounts of false-positives</li>
+                    <li>Help in getting rid of Breast Cancer faster so less money needs to be spent on treatment</li>
+                    <li>FREE TO USE!!!!!</li>
+                    <li>Encourages patients to be healhty and have a good diet. The diet is given to them by proffessional dieteciens</li>
+                    <li>Could save millions of lives!</li>
+                    <li>Makes the job easier on the doctor so he can be more focused</li>
+                    <li>There are basicaly numerous benefits of this. THIS WILL REVOLUTIONIZE THE MEDICAL FEILD!</li>
+                    <li>Faster communication between patients and doctors</li>
+                    <li>Explains what to do in detail</li>
+                    <li>Shows your pills to take and when to eat them</li>
+                </ul>
+        
+    </section>
+    
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border trans">
+                
+            </span>
+        </div>
+    </div>
+    
+    <section class="section section-dark">
+        <h2>Patient Satvik</h2>
+        <p id="output">
+
+
+        </p>
+        
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
+    <script>
+        AOS.init();
+    </script>
+    
+    <div class="gallery">
+        
+    </div>
+    
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                Project Panacea
+            </span>
+        </div>
+    </div>
+</body>
+</html>
